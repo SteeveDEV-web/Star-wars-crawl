@@ -1,0 +1,93 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto ;
+    perspective: 500px;
+    perspective-origin: bottom;
+
+}
+
+body{
+
+    background-image: url(images/ciel.jpeg);
+    background-repeat: repeat;
+    overflow: hidden;
+
+}
+
+.alta{
+
+    font-size: 60px;
+    text-align: center;
+    color: rgba(0, 110, 255, 0.829);
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: a-long-time-ago;
+    animation-timing-function: ease-out;
+}
+
+@keyframes a-long-time-ago {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.img{
+
+    width : 200px;
+    height: 200px;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-name: img;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes img {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.anim{
+
+
+    font-size: 40px;
+    letter-spacing: normal;
+    color: #FFC31E;
+    transition: 2s infinite;
+    transform: perspective(280px) rotateX(25deg);
+    animation: mymove 10s infinite;
+    animation-duration: 25s;
+}
+
+@keyframes mymove{
+    0%{
+        transform: rotateX(21deg) translate3d( 0, 100rem, 0);
+        opacity: 1;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotateX(21deg) translate3d( 0, -150rem, 0);
+        opacity: 0;
+    }
+}
+
